@@ -45,7 +45,7 @@ def welcome():
 @app.route("/api/v1.0/precipitation")
 
 # # create the precipitation function
-# ## add add the line of code that calculates the date one year ago from the most recent date in the database
+# ## add the line of code that calculates the date one year ago from the most recent date in the database
 # ### write a query to get the date and precipitation for the previous year.
 # #### use jsonify() to format our results into a JSON structured file
 def precipitation():
@@ -69,7 +69,28 @@ def stations():
     stations = list(np.ravel(results))
     return jsonify(stations=stations)
 
-# 4. Statistics Route(report on the minimum, average, and maximum temperatures)
+# 5. Monthly temperature route
+
+# Monthly Temperature Route
+# The goal is to return the temperature observations for the previous year
+# define the code
+@app.route("/api/v1.0/tobs")
+
+# create a function called temp_monthly()
+## calculate the date one year ago from the last date in the database
+###query the primary station for all the temperature observations from the previous year
+#### , unravel the results into a one-dimensional array and convert that array into a list
+#### jsonify the list and return our results
+#### Add the return statement to the end of the code
+
+def temp_monthly():
+    prev_year = dt.date(2017, 8, 23) - dt.timedelta(days=365)
+    results = session.query(Measurement.tobs).\
+      filter(Measurement.station == 'USC00519281').\
+      filter(Measurement.date >= prev_year).all()
+    temps = list(np.ravel(results))
+    return jsonify(temps=temps)
+# 5. Statistics Route(report on the minimum, average, and maximum temperatures)
 
 # start by providing both a starting and ending date
 @app.route("/api/v1.0/temp/<start>")
