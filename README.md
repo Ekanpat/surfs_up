@@ -11,33 +11,36 @@ I used python and notebook for data analysis. Now, the work which is require is 
 
 # Results:
 
-I have pulled June data from 2010 up to 2018. The total data for June was 18,239 presented in a list.
+I have pulled June data from 2010 up to 2018. The total data for June was 1,700 presented in a list.
 
 ## June
-The temperature pulled are as below in a dataframe.
+The temperature pulled are as below in a dataframe, summarizing the results.
 - June temperature
 ![image](Resources/June_Temperature.png)
 
-The mean is 73.2 and the max is 87 with 75% of the data located in the 76 which is better for vacations.
+The mean is 74.9 and the max is 85 with 75% of the data located in the 77 degree which is better for vacations.
 
 I also plot the data to have an idea of temperature fluctuation.
 
 - June plot
 ![image](Resources/Plot_temp_june.png)
 
-The December data do not differ match with June. See below the dataframe summarizing the results.
+We can see as per the plot , that the temperature are balanced throughout the data set. The split (drop or increase) is not significant. 
 
 - December dataframe
 ![image](Resources/Dec_Temperature.png)
 
-17,001 count with a mean of 73.1 and a max of 87, which is similar to June.
+1,517 count with a mean of 71 and a max of 83 degree, which is in the range of June temperatures.
 - Plot December
 ![image](Resources/Plot_temp_dec.png)
 
-The plot also look similar and no major difference with temperature favourable to a summer business.
+The plot also look similar to June with limited fluctuation from the data analayzed.
+Somehow,  december is an appropriate month for ice cream and beach, in Hawaii.
 
 # Summary
 
-As captured above, the temperature for June and December do not differ much and look similar. With the same statistical outcome, it is considered as better for the summer business. I encouraged Avy in the business.
+As captured above, the temperatures for June and December do not differ much and look similar. With the same statistical outcome, it is considered as better for the summer business. I encouraged Avy in the business.
+
+December, in most of the regions, is a cold momth with some part reaching freezing. However, Hawaii is different. Climate is favourable throughout the year for vacation, beach and ice cream.
 
 The outcome of the data analysis is that the surf and ice cream shop business are sustainable year-round.
